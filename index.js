@@ -63,19 +63,20 @@ function playGame() {
         }
         break;
     }
-    return `${msg} Your score: ${humanScore} Computer score: ${computerScore}`;
+    msg = `${msg} Your score: ${humanScore} Computer score: ${computerScore}`;
+    console.log(msg);
+    return msg;
   }
 
   while(round > 0) {
     let humanSelection = getHumanChoice();
     let computerSelection = getComputerChoice();
+    playRound(humanSelection, computerSelection);
     round--;
   }
-
   let endGameMsg =  (humanScore > computerScore) ? "You win!" : "You lose!";
   endGameMsg += ` Your score: ${humanScore} Computer score: ${computerScore}`;
   let playAgain = confirm(`${endGameMsg} Want to play again?`);
-  
   if(playAgain) {
     playGame();
   }
