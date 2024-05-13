@@ -18,7 +18,6 @@ function getHumanChoice() {
 function playGame() {
   let humanScore = 0;
   let computerScore = 0;
-  let round = 5;
 
   function playRound(humanChoice, computerChoice) {
     let msg = "";
@@ -68,15 +67,11 @@ function playGame() {
     return msg;
   }
 
-  while(round > 0) {
-    let humanSelection = getHumanChoice();
-    let computerSelection = getComputerChoice();
-    playRound(humanSelection, computerSelection);
-    round--;
-  }
-  let endGameMsg =  (humanScore > computerScore) ? "You win!" : "You lose!";
-  endGameMsg += ` Your score: ${humanScore} Computer score: ${computerScore}`;
-  let playAgain = confirm(`${endGameMsg} Want to play again?`);
+  let humanSelection = getHumanChoice();
+  let computerSelection = getComputerChoice();
+  let msg = playRound(humanSelection, computerSelection);
+
+  let playAgain = confirm(`${msg} Want to play again?`);
   if(playAgain) {
     playGame();
   }
