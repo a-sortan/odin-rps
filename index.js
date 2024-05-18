@@ -102,4 +102,4 @@ function playGame(rounds = 5) {
 
 }
 
-playGame(3);
+playGame();

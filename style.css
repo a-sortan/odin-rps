@@ -1,0 +1,43 @@
+html {
+  box-sizing: border-box;
+  color: rgb(1, 27, 51);
+}
+*,
+*::before,
+*::after { 
+  box-sizing: border-box; 
+  /* border: 1px solid red; */
+}
+
+h1 {
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
+}
+
+#game-status, #round-status {
+  min-height: 32px;
+}
+
+button {
+  background-color: rgba(8, 48, 85, 0.8);
+  padding: 16px 32px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  border: 0;
+  color: aliceblue;
+}
+
+button:hover {
+  color: white;
+  background-color: rgba(8, 48, 85, 1);
+}
